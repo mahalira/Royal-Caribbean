@@ -1,4 +1,8 @@
 @import 'fonts';
 @import 'variables';
 @import 'icons';
-@import './components/App.scss';
+
+//Components
+@import './components/cruiseSearchWidget.scss';
+@import './components/button.scss';
+@import './components/optionFilter.scss';

@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from './components/Button';
+import OptionFilter from './components/OptionFilter';
 
 const CruiseSearchWidget = () => {
     return (
@@ -7,7 +9,7 @@ const CruiseSearchWidget = () => {
                 Find a Cruise
             </div>
             <div class="cruise-search-widget__toolbar">
-                <div id="" class="cruise-search-widget__filter" tabindex="0">
+                {/* <div id="" class="cruise-search-widget__filter" tabindex="0">
                     <span class="cruise-search-widget__label">Cruises to</span>
                     <div class="cruise-search-widget__selector">
                         <span class="cruise-search-widget__selection">Any Destination</span>
@@ -15,29 +17,32 @@ const CruiseSearchWidget = () => {
                         </span>
                         <span class="cruise-search-widget__badge">+2</span>
                     </div>
-                </div>
-                <div id="" class="cruise-search-widget__filter" tabindex="0">
+                </div> */}
+                <OptionFilter label={'Cruises to'} selection={'Any Destination'} />
+                <OptionFilter label={'Sailing from'} selection={'Any Departure Port'} />
+                <OptionFilter label={'Leaving'} selection={'Any Date'} type={'calendar'}/>
+                {/* <div id="" class="cruise-search-widget__filter" tabindex="0">
                     <span class="cruise-search-widget__label">Sailing from</span>
                     <div class="cruise-search-widget__selector">
-                        <span class="cruise-search-widget__selection">Any Departure Port</span> 
+                        <span class="cruise-search-widget__selection">Any Departure Port</span>
                         <span class="cruise-search-widget__icon">
                         </span>
                         <span class="cruise-search-widget__badge">+2</span>
                     </div>
-                </div>
-                <div id="" class="cruise-search-widget__filter" tabindex="0">
+                </div> */}
+                {/* <div id="" class="cruise-search-widget__filter" tabindex="0">
                     <span class="cruise-search-widget__label">Leaving</span>
                     <div class="cruise-search-widget__selector">
                         <span class="cruise-search-widget__selection">Any Date</span>
                         <span class="cruise-search-widget__icon">
                         </span>
                     </div>
-                </div>
+                </div> */}
                 <div class="cruise-search-widget__cta">
-                    <button id="" class="cruise-search-widget__button">Search Cruises</button>
+                    <Button text={window.innerWidth <= 760 ? 'FIND A CRUISE' : 'SEARCH CRUISES'} />
                 </div>
             </div>
-            <div class="cruise-search-widget__dropdown">
+            {/* <div class="cruise-search-widget__dropdown">
                 <div class="cruise-search-widget__dropdown-header">
                     <button id="" class="cruise-search-widget__dropdown-button">
                         <span class="cruise-search-widget__icon">
@@ -81,7 +86,7 @@ const CruiseSearchWidget = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

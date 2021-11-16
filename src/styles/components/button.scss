@@ -1,0 +1,19 @@
+.button-primary {
+    background-color: $blue;
+    font-family: "ProximaNova-Regular";
+    border-radius: 0.1875rem;
+    color: $white;
+    cursor: pointer;
+    font-size: 0.75rem;
+    height: 2.75rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    border: none;
+    padding: 0px 20px;
+    margin-top: 10px;
+    @media (min-width: $desktop-breakpoint) {
+        font-size: .875rem;
+        margin-top: 0px;
+      }
+   
+}

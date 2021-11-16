@@ -1,0 +1,50 @@
+.cruise-search-widget {
+  &__base {
+    background: #fff;
+    border-radius: 12px;
+    font-size: 22px;
+    padding: 36px 24px 36px 24px;
+    text-align: center;
+    letter-spacing: .125rem;
+    @media (min-width: $desktop-breakpoint) {
+      height: auto;
+      box-shadow: 0 0.0625rem 1rem 0 $gray;
+      padding: 0px;
+    }
+  }
+
+  &__title{
+    color: $gray;
+    font-family: "ProximaNova-Bold";
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @media (min-width: $desktop-breakpoint) {
+      display: none;
+    }
+  }
+  &__toolbar{
+    .filter{
+      @media (max-width: $mobile-breakpoint) {
+        margin-bottom: 12px;
+      }
+     
+      @media (min-width: $desktop-breakpoint) {
+        width: 25%;
+        margin-bottom: 0px;
+      }
+    }
+    @media (min-width: $desktop-breakpoint) {
+      display: inline-flex;
+      width: 100%;
+      padding: 0px 20px;
+      align-items: center;
+    }
+  }
+
+  &__cta{
+    @media (min-width: $desktop-breakpoint) {
+      position: absolute;
+      right: 32px;
+    }
+  }
+}
