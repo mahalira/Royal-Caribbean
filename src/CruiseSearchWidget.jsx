@@ -17,7 +17,11 @@ const CruiseSearchWidget = () => {
     const [optionSelected, setOptionSelected] = useState('');
     const [openOptions, setOpenOptions] = useState(false);
     const showOptions = (id) => {
-        setOpenOptions(!openOptions);
+        if(optionSelected !== id || !openOptions){
+            setOpenOptions(true);
+        }else{
+            setOpenOptions(false);
+        }
         setOptionSelected(id);
     }
     return (
@@ -49,7 +53,7 @@ const CruiseSearchWidget = () => {
                     </div>
 
                     <div className="cruise-search-widget__dropdown__content">
-                        {optionSelected === 1 && <div class="cruise-search-widget__dropdown__content__options">
+                        {optionSelected === 1 && <div className="cruise-search-widget__dropdown__content__options">
                             {countries.map((e, i) => <Select text={e} id={i} />)}
                         </div>}
                         {optionSelected === 2 &&

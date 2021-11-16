@@ -5,7 +5,7 @@ const OptionFilter = ({label, selection, type, id, openTab, isActive}) => {
         openTab(id)
     }
     return (
-        <div id="" className={isActive ? "filter active" : "filter"} onClick={() => showContent()}>
+        <div key={id} className={isActive ? "filter active" : "filter"} onClick={() => showContent()}>
             <span className="filter__label">{label}</span>
             <div className="filter__selector">
                 <span className="filter__selector__selection">{selection}</span>
