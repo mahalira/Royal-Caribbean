@@ -41,6 +41,24 @@
             color: $blue;
             font-size: 16px;
             letter-spacing: 0.125rem;
+            cursor: pointer;
+            position: relative;
+           
         }
+        .month--active {
+            color: $white !important;
+            &::after {
+                content: " ";
+                position: absolute;
+                background-color: $blue;
+                z-index: -1;
+                top: -8px;
+                left: 0px;
+                border-radius: 20px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+       
     }
 }
