@@ -4,6 +4,7 @@
     padding: 15px 24px 14px;
     background-color: none;
     text-align: left;
+    cursor: pointer;
     &__text{
         font-family: "ProximaNova-Regular";
         color:$blue;
@@ -14,4 +15,9 @@
 
 .select-active {
     background-color: $gray2;
+    @media (min-width: $desktop-breakpoint) {
+        width: max-content;
+        height: max-content;
+    }
+    
 }

@@ -16,6 +16,8 @@ const years = ['2018', '2019', '2020'];
 const CruiseSearchWidget = () => {
     const [optionSelected, setOptionSelected] = useState('');
     const [openOptions, setOpenOptions] = useState(false);
+    const [destinations, setDestinations] = useState([]);
+    const [shipments, setShipments] = useState([]);
     const showOptions = (id) => {
         if(optionSelected !== id || !openOptions){
             setOpenOptions(true);
@@ -30,8 +32,8 @@ const CruiseSearchWidget = () => {
                 Find a Cruise
             </div>
             <div className="cruise-search-widget__toolbar">
-                <OptionFilter label={'Cruises to'} selection={'Any Destination'} openTab={showOptions} isActive={optionSelected === 1 && openOptions} id={1} />
-                <OptionFilter label={'Sailing from'} selection={'Any Departure Port'} openTab={showOptions} isActive={optionSelected === 2 && openOptions} id={2} />
+                <OptionFilter label={'Cruises to'} selection={'Any Destination'} openTab={showOptions} isActive={optionSelected === 1 && openOptions} id={1} count={destinations.length}/>
+                <OptionFilter label={'Sailing from'} selection={'Any Departure Port'} openTab={showOptions} isActive={optionSelected === 2 && openOptions} id={2} count={destinations.length}/>
                 <OptionFilter label={'Leaving'} selection={'Any Date'} type={'calendar'} openTab={showOptions} isActive={optionSelected === 3 && openOptions} id={3} />
                 <div className="cruise-search-widget__cta">
                     <Button text={window.innerWidth <= 760 ? 'FIND A CRUISE' : 'SEARCH CRUISES'} />
