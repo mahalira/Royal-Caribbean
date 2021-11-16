@@ -1,0 +1,15 @@
+.tab {
+    &__text {
+        text-transform: uppercase;
+        color: $blue;
+        font-size: 0.75rem;
+        letter-spacing: 0.125rem;
+        font-family: "ProximaNova-Regular";
+    }
+    &--active {
+        border-bottom: 4px solid $blue;
+        .tab__text {
+            font-family: "ProximaNova-Bold";
+        }
+    }
+}
