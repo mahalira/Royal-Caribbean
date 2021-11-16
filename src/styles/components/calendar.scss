@@ -1,0 +1,46 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__year {
+        &__text {
+            font-family: "ProximaNova-Light";
+            color: $gray;
+            font-size: 1.5rem;
+            letter-spacing: 0.125rem;
+            position: relative;
+            padding: 0px 70px;
+            @media (max-width: $mobile-breakpoint) {
+                &::after {
+                    content: "";
+                    border-bottom: 3px solid #626366;
+                    position: absolute;
+                    display: block;
+                    top: 10px;
+                    width: 80px;
+                    right: 70px;
+                }
+                &::before {
+                    content: "";
+                    border-bottom: 3px solid #626366;
+                    position: absolute;
+                    display: block;
+                    top: 10px;
+                    width: 80px;
+                }
+            }
+        }
+    }
+    &__months {
+        display: grid;
+        grid-template-columns: 40px 40px 40px 40px;
+        justify-content: center;
+        grid-gap: 40px;
+        &__month {
+            font-family: "ProximaNova-Regular";
+            color: $blue;
+            font-size: 16px;
+            letter-spacing: 0.125rem;
+        }
+    }
+}

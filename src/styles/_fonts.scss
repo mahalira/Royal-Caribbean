@@ -9,3 +9,9 @@
     src: local("ProximaNova-Regular"), url("../resources/FontsFree-Net-ProximaNova-Regular.ttf") format("OpenType");
     font-display: swap;
 }
+
+@font-face {
+    font-family: "ProximaNova-Light";
+    src: local("ProximaNova-Light"), url("../resources/FontsFree-Net-Proxima-Nova-Light.otf") format("OpenType");
+    font-display: swap;
+}

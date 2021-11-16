@@ -56,7 +56,7 @@
     display: block;
     top: 0px;
     position: absolute;
-    overflow: scroll;
+    overflow-y: scroll;
     @media (min-width: $desktop-breakpoint) {
       height: auto;
       position: relative;
@@ -76,6 +76,7 @@
       &--buttonreturn {
         position: absolute;
         left: 16px;
+        cursor: pointer;
       }
       &--label {
         color: $gray3;
@@ -106,8 +107,22 @@
           justify-content: center;
         }
       }
+      &__calendars{
+        @media (min-width: $desktop-breakpoint) {
+          display: inline-flex;
+          margin: 40px auto;
+        }
+        .calendar{
+          @media (min-width: $desktop-breakpoint) {
+            margin: 0px 40px;
+          }
+          @media (max-width: $mobile-breakpoint) {
+            margin: 30px auto;
+          }
+        }
+      }
       &__tabs {
-        display: inline-flex;
+          display: inline-flex;
         @media (max-width: $mobile-breakpoint) {
           border-bottom: 1px solid $blue;
         }
@@ -118,7 +133,6 @@
           width: 150px;
           @media (min-width: $desktop-breakpoint) {
             width: auto;
-
             margin-right: 50px;
           }
         }
