@@ -35,7 +35,7 @@
         display: grid;
         grid-template-columns: 40px 40px 40px 40px;
         justify-content: center;
-        grid-gap: 40px;
+        grid-gap: 20px 40px;
         &__month {
             font-family: "ProximaNova-Regular";
             color: $blue;
@@ -43,7 +43,6 @@
             letter-spacing: 0.125rem;
             cursor: pointer;
             position: relative;
-           
         }
         .month--active {
             color: $white !important;
@@ -59,6 +58,17 @@
                 height: 40px;
             }
         }
-       
+        .month--selected {
+            &::after {
+                content: " ";
+                position: absolute;
+                background-color: $gray2;
+                z-index: -1;
+                width: 80px;
+                height: 40px;
+                left: 0px;
+                top: -8px;
+            }
+        }
     }
 }

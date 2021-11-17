@@ -25,6 +25,9 @@
             padding: 0;
             text-transform: uppercase;
         }
+        @media (max-width: $mobile-breakpoint) {
+            margin-right: 5px;
+        }
     }
     &__selector {
         display: flex;

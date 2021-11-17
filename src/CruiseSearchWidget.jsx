@@ -9,6 +9,10 @@ const countries = ['Alaska', 'Arabian Gulf', 'Asia', 'Australia&New Zealand', 'B
     'Canada & New England', 'Caribbean', 'Cuba', 'Europe', 'Hawaii', 'Panama Canal', 'Repositioning',
     'South Pacific', 'Transatlantic', 'Transpacific'];
 
+const ports = ['Baltimore, Maryland', 'Boston, Massachusetts', 'Cape Liberty, New Jersey', 'Fort Lauderdale, Florida', 'Galveston, Texas',
+    'Honolulu (Oahu), Hawaii', 'Los Angeles, California', 'Miami, Florida', 'New Orleans, Louisana', 'Orlando ( Port Canaveral), FL',
+    'Quebec City, Quebec, Canada', 'San Diego, California', 'San Juan, Puerto Rico', 'Seattle, Washinton', 'Seward, Alaska', 'Tampa, Florida', 'Vancouver, British Colombia'];
+
 const tabs = ['The Americas & the caribbean', 'Europe', 'Asia & Southpacific'];
 
 const years = ['2018', '2019', '2020'];
@@ -20,7 +24,7 @@ const CruiseSearchWidget = () => {
     const [shipments, setShipments] = useState([]);
     const [dates, setDates] = useState([]);
     const [arrTemp, setArrTemp] = useState([]);
-    const[year, setYear] = useState('');
+    const [year, setYear] = useState('');
 
     useEffect(() => {
         setArrTemp([]);
@@ -40,7 +44,7 @@ const CruiseSearchWidget = () => {
             setDestinations([...arrTemp]);
         } else if (id === 2) {
             setShipments([...arrTemp])
-        } else if(id ===3){
+        } else if (id === 3) {
             setDates([...arrTemp])
         }
 
@@ -50,7 +54,7 @@ const CruiseSearchWidget = () => {
         if (window.innerWidth > 760) {
             let arrTemp = [...group, text];
             setGroup([...arrTemp]);
-        } else{
+        } else {
             let newArrTemp = [...arrTemp, text];
             setArrTemp([...newArrTemp]);
         }
@@ -62,9 +66,9 @@ const CruiseSearchWidget = () => {
                 Find a Cruise
             </div>
             <div className="cruise-search-widget__toolbar">
-                <OptionFilter label={'Cruises to'} selection={'Any Destination'} openTab={showOptions} isActive={optionSelected === 1 && openOptions} id={1} group={destinations} />
-                <OptionFilter label={'Sailing from'} selection={'Any Departure Port'} openTab={showOptions} isActive={optionSelected === 2 && openOptions} id={2} group={shipments} />
-                <OptionFilter label={'Leaving'} selection={'Any Date'} type={'calendar'} openTab={showOptions} isActive={optionSelected === 3 && openOptions} id={3} group={dates} year={year}/>
+                <OptionFilter label={'Cruises to'} labelSecond={'To'} selection={'Any Destination'} openTab={showOptions} isActive={optionSelected === 1 && openOptions} id={1} group={destinations} />
+                <OptionFilter label={'Departing from'} labelSecond={'From'} selection={'Any Port'} openTab={showOptions} isActive={optionSelected === 2 && openOptions} id={2} group={shipments} />
+                <OptionFilter label={'Departing'} labelSecond={'Departing'} selection={'Any Date'} type={'calendar'} openTab={showOptions} isActive={optionSelected === 3 && openOptions} id={3} group={dates} year={year} />
                 <div className="cruise-search-widget__cta">
                     <Button text={window.innerWidth <= 760 ? 'FIND A CRUISE' : 'SEARCH CRUISES'} />
                 </div>
@@ -92,7 +96,7 @@ const CruiseSearchWidget = () => {
 
                     <div className="cruise-search-widget__dropdown__content">
                         {optionSelected === 1 && <div className="cruise-search-widget__dropdown__content__options">
-                            {countries.map((e, i) => <Select text={e} id={i}  group={destinations} setGroup={setDestinations} sendData={getData} />)}
+                            {countries.map((e, i) => <Select text={e} id={i} group={destinations} setGroup={setDestinations} sendData={getData} />)}
                         </div>}
                         {optionSelected === 2 &&
                             <>
@@ -102,13 +106,13 @@ const CruiseSearchWidget = () => {
                                     })}
                                 </div>
                                 <div className="cruise-search-widget__dropdown__content__options">
-                                    {countries.map((e, i) => <Select text={e} id={i}  group={shipments} setGroup={setShipments} sendData={getData} />)}
+                                    {ports.map((e, i) => <Select text={e} id={i} group={shipments} setGroup={setShipments} sendData={getData} />)}
                                 </div>
                             </>
                         }
                         {optionSelected === 3 &&
                             <div className="cruise-search-widget__dropdown__content__calendars">
-                                {years.map((e, i) => <Calendar text={e} id={i} group={dates} setGroup={setDates} sendData={getData} setYear={setYear}/>)}
+                                {years.map((e, i) => <Calendar text={e} id={i} group={dates} setGroup={setDates} sendData={getData} setYear={setYear} />)}
                             </div>
                         }
                         <div />
