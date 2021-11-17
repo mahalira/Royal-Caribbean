@@ -57,6 +57,9 @@
     top: 0px;
     position: absolute;
     overflow-y: scroll;
+    @media (max-width: $mobile-breakpoint) {
+      overflow-x: hidden;
+    }
     @media (min-width: $desktop-breakpoint) {
       height: auto;
       position: relative;
@@ -125,6 +128,7 @@
           display: inline-flex;
         @media (max-width: $mobile-breakpoint) {
           border-bottom: 1px solid $blue;
+          overflow-x: auto;
         }
         @media (min-width: $desktop-breakpoint) {
           margin-top: 40px;
