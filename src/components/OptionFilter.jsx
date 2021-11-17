@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OptionFilter = ({ label, selection, type, id, openTab, isActive, group }) => {
+const OptionFilter = ({ label, selection, type, id, openTab, isActive, group, year }) => {
     const showContent = () => {
         openTab(id)
     }
@@ -8,7 +8,7 @@ const OptionFilter = ({ label, selection, type, id, openTab, isActive, group }) 
         <div key={id} className={isActive ? "filter active" : "filter"} onClick={() => showContent()}>
             <span className="filter__label">{label}</span>
             <div className="filter__selector">
-                <span className="filter__selector__selection">{group.length !== 0 ? group[0] :selection}</span>
+                <span className="filter__selector__selection">{group.length !== 0 ? (type=== "calendar" ? (group.length>1 ?(`${group[0]} ${year} - ${group[1]}  ${year}`): `${group[0]} ${year}` ): group[0]) :selection}</span>
                 {group.length !== 0 & type !== 'calendar' ?
                     <span class="filter__selector__badge">+{group.length}</span>
                     :

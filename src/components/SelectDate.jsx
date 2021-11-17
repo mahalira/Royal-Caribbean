@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-const SelectDate = ({ text, id }) => {
+const SelectDate = ({ text, id, group, setGroup, sendData, setYear, year }) => {
     const [active, setActive] = useState(false);
     const addOptions = () => {
         setActive(!active);
-        // sendData(text, group, setGroup);
+        sendData(text, group, setGroup);
+        setYear(year);
     }
 
     return (
