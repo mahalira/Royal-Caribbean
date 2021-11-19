@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Royal-Caribbean/static/css/main.0b896a95.chunk.css",
+    "main.js": "/Royal-Caribbean/static/js/main.54e0c98b.chunk.js",
+    "main.js.map": "/Royal-Caribbean/static/js/main.54e0c98b.chunk.js.map",
+    "runtime-main.js": "/Royal-Caribbean/static/js/runtime-main.22f622b0.js",
+    "runtime-main.js.map": "/Royal-Caribbean/static/js/runtime-main.22f622b0.js.map",
+    "static/js/2.d556094c.chunk.js": "/Royal-Caribbean/static/js/2.d556094c.chunk.js",
+    "static/js/2.d556094c.chunk.js.map": "/Royal-Caribbean/static/js/2.d556094c.chunk.js.map",
+    "static/js/3.9d277dc4.chunk.js": "/Royal-Caribbean/static/js/3.9d277dc4.chunk.js",
+    "static/js/3.9d277dc4.chunk.js.map": "/Royal-Caribbean/static/js/3.9d277dc4.chunk.js.map",
+    "index.html": "/Royal-Caribbean/index.html",
+    "static/css/main.0b896a95.chunk.css.map": "/Royal-Caribbean/static/css/main.0b896a95.chunk.css.map",
+    "static/js/2.d556094c.chunk.js.LICENSE.txt": "/Royal-Caribbean/static/js/2.d556094c.chunk.js.LICENSE.txt",
+    "static/media/global.scss": "/Royal-Caribbean/static/media/FontsFree-Net-ProximaNova-Regular.2a9ce1ea.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22f622b0.js",
+    "static/js/2.d556094c.chunk.js",
+    "static/css/main.0b896a95.chunk.css",
+    "static/js/main.54e0c98b.chunk.js"
+  ]
+}
